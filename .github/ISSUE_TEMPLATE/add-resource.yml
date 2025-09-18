@@ -1,0 +1,96 @@
+name: Add Resource
+description: Suggest a new CDK TypeScript resource
+title: "[ADD] "
+labels: ["addition", "pending-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new resource! Please provide the following information.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which category does this resource belong to?
+      options:
+        - Construct Library
+        - Learning Resource
+        - Tool/Utility
+        - Pattern/Example
+        - Real-World Project
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Resource Name
+      description: Name of the resource
+      placeholder: "e.g., cdk-monitoring-constructs"
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Link to the resource
+      placeholder: "https://github.com/..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Brief description of the resource (max 100 characters)
+      placeholder: "High-level monitoring constructs for AWS services"
+    validations:
+      required: true
+
+  - type: input
+    id: npm
+    attributes:
+      label: NPM Package Name
+      description: NPM package name (if applicable)
+      placeholder: "cdk-monitoring-constructs"
+
+  - type: checkboxes
+    id: criteria
+    attributes:
+      label: Criteria Checklist
+      description: Please confirm the resource meets these criteria
+      options:
+        - label: TypeScript support or TypeScript-first
+          required: true
+        - label: Active maintenance (commits within 6 months)
+          required: true
+        - label: Clear documentation
+          required: true
+        - label: Adds unique value to the ecosystem
+          required: true
+        - label: Working/functional state
+          required: true
+
+  - type: textarea
+    id: value
+    attributes:
+      label: Why should this be included?
+      description: Explain the value this resource adds to the CDK TypeScript ecosystem
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      description: Please confirm you've completed these steps
+      options:
+        - label: I've checked this isn't a duplicate
+          required: true
+        - label: I've tested the link works
+          required: true
+        - label: I've read the contributing guidelines
+          required: true

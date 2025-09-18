@@ -1,0 +1,33 @@
+{
+  "name": "awesome-cdk-typescript",
+  "version": "1.0.0",
+  "description": "A curated list of awesome AWS CDK TypeScript resources",
+  "scripts": {
+    "check-links": "markdown-link-check README.md",
+    "lint": "markdownlint README.md CONTRIBUTING.md",
+    "validate": "awesome-lint README.md",
+    "format": "prettier --write '**/*.{md,json,yml}'",
+    "test": "npm run lint && npm run check-links"
+  },
+  "keywords": [
+    "aws",
+    "cdk",
+    "typescript",
+    "awesome-list",
+    "cloud",
+    "infrastructure-as-code"
+  ],
+  "author": "CDK TypeScript Community",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "awesome-lint": "^0.18.6",
+    "markdown-link-check": "^3.11.2",
+    "markdownlint-cli": "^0.37.0",
+    "prettier": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/awesome-cdk-typescript.git"
+  },
+  "homepage": "https://github.com/yourusername/awesome-cdk-typescript#readme"
+}

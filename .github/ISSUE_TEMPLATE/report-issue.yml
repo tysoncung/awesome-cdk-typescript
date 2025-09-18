@@ -1,0 +1,59 @@
+name: Report Issue
+description: Report a broken link, outdated information, or other issue
+title: "[ISSUE] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us maintain the quality of this list!
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What type of issue are you reporting?
+      options:
+        - Broken link
+        - Outdated information
+        - Duplicate entry
+        - Unmaintained project
+        - Incorrect categorization
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: resource
+    attributes:
+      label: Resource Name
+      description: Which resource has the issue?
+      placeholder: "e.g., cdk-monitoring-constructs"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue Description
+      description: Describe the issue in detail
+      placeholder: "The link returns 404..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Fix
+      description: How should this be fixed? (optional)
+      placeholder: "Update the URL to..."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I've verified this issue exists
+          required: true
+        - label: I've checked for duplicate issues
+          required: true

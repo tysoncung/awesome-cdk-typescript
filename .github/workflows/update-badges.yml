@@ -1,0 +1,44 @@
+name: Update Badges
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-badges:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm install axios cheerio
+
+    - name: Update NPM badges
+      run: |
+        node .github/scripts/update-badges.js
+
+    - name: Check for changes
+      id: git-check
+      run: |
+        git diff --exit-code || echo "changed=true" >> $GITHUB_OUTPUT
+
+    - name: Commit and push if changed
+      if: steps.git-check.outputs.changed == 'true'
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add -A
+        git commit -m "chore: update badges [skip ci]"
+        git push

@@ -1,0 +1,76 @@
+name: Validate Links and Format
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run every Sunday at midnight UTC
+    - cron: '0 0 * * 0'
+
+jobs:
+  validate-links:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: |
+        npm install -g markdown-link-check
+        npm install -g markdownlint-cli
+
+    - name: Check markdown formatting
+      run: markdownlint README.md CONTRIBUTING.md
+      continue-on-error: true
+
+    - name: Check for broken links
+      run: |
+        markdown-link-check README.md -c .github/markdown-link-check-config.json
+      continue-on-error: true
+
+    - name: Report results
+      if: failure()
+      uses: actions/github-script@v6
+      with:
+        script: |
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: '⚠️ Some links appear to be broken. Please check the validation results.'
+          })
+
+  check-formatting:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Check alphabetical order
+      run: |
+        # Simple script to check if entries are alphabetically sorted
+        python3 .github/scripts/check-alphabetical.py
+      continue-on-error: true
+
+    - name: Validate badges
+      run: |
+        # Check if NPM packages have proper badges
+        python3 .github/scripts/validate-badges.py
+      continue-on-error: true
+
+  awesome-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Run awesome-lint
+      run: npx awesome-lint README.md
+      continue-on-error: true
