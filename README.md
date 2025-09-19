@@ -40,6 +40,7 @@
   - [Development Tools](#development-tools)
   - [Testing Tools](#testing-tools)
   - [Validation & Linting](#validation--linting)
+  - [Cost Management](#cost-management)
 - [Project Templates](#project-templates)
 - [TypeScript Specific](#typescript-specific)
 - [Real-World Projects](#real-world-projects)
@@ -192,7 +193,7 @@
 
 ### Validation & Linting
 
-- ✅ [cdk-nag](https://github.com/cdklabs/cdk-nag) - Best practice checks
+- ✅ [cdk-validator](https://github.com/cdklabs/cdk-nag) - Best practice checks
 - ✅ [cfn-lint](https://github.com/aws-cloudformation/cfn-lint) - CloudFormation linting
 - ✅ [cdk-validator-cfnguard](https://github.com/cdklabs/cdk-validator-cfnguard) - Policy validation
 - ✅ [Checkov](https://github.com/bridgecrewio/checkov) - Security scanning
@@ -306,9 +307,9 @@ export class RestApi<T extends Record<string, any>> extends Construct {
 
 - 🌟 [Construct Hub](https://github.com/cdklabs/construct-hub) - CDK construct discovery platform
 - 🌟 [Serverless Stack (SST)](https://github.com/serverless-stack/sst) - Full-stack serverless framework
-- 🌟 [AWS Controllers for Kubernetes](https://github.com/aws-controllers-k8s/community) - K8s controllers
+- 🌟 [AWS Controllers for Kubernetes](https://github.com/aws-controllers-k8s/community) - Kubernetes controllers
 - 🌟 [Serverless Airline](https://github.com/aws-samples/aws-serverless-airline-booking) - Demo airline app
-- 🌟 [AWS Solutions Constructs](https://github.com/awslabs/aws-solutions-constructs) - Solution patterns
+- 🌟 [AWS Solutions Library](https://github.com/awslabs/aws-solutions-constructs) - Solution patterns
 
 ### Company Case Studies
 
@@ -380,10 +381,10 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ### How to Contribute
 
-1. **Add a Resource** - Submit a PR with your addition
-2. **Fix an Issue** - Help us maintain link quality
-3. **Improve Documentation** - Enhance descriptions or examples
-4. **Share Your Project** - Add your real-world CDK project
+- **Add a Resource** - Submit a PR with your addition
+- **Fix an Issue** - Help us maintain link quality
+- **Improve Documentation** - Enhance descriptions or examples
+- **Share Your Project** - Add your real-world CDK project
 
 ### Criteria for Inclusion
 
@@ -391,14 +392,6 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 - Active maintenance (commits within last 6 months)
 - Clear documentation
 - Adds value to the CDK TypeScript ecosystem
-
----
-
-## License
-
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
-
-This list is released into the public domain.
 
 ---
 
@@ -411,3 +404,4 @@ This list is released into the public domain.
 <div align="center">
   <sub>Built with ❤️ by the CDK TypeScript community</sub>
 </div>
+
