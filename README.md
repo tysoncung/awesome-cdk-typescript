@@ -45,8 +45,6 @@
 - [TypeScript Specific](#typescript-specific)
 - [Real-World Projects](#real-world-projects)
 - [Best Practices](#best-practices)
-- [Contributing](#contributing)
-- [Star History](#star-history)
 
 ---
 
@@ -394,13 +392,6 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 - Clear documentation
 - Adds value to the CDK TypeScript ecosystem
 
----
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=awesome-cdk-typescript&type=Date)](https://star-history.com/#awesome-cdk-typescript&Date)
-
----
 
 <div align="center">
   <sub>Built with ❤️ by the CDK TypeScript community</sub>
