@@ -378,13 +378,6 @@ export class MonitoringStack extends Stack { }
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-### How to Contribute
-
-- Add a Resource - Submit a PR with your addition
-- Fix an Issue - Help us maintain link quality
-- Improve Documentation - Enhance descriptions or examples
-- Share Your Project - Add your real-world CDK project
-
 ### Criteria for Inclusion
 
 - Must be TypeScript-specific or have excellent TypeScript support
@@ -396,4 +389,3 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 <div align="center">
   <sub>Built with ❤️ by the CDK TypeScript community</sub>
 </div>
-
