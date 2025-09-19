@@ -46,6 +46,7 @@
 - [Real-World Projects](#real-world-projects)
 - [Best Practices](#best-practices)
 - [Contributing](#contributing)
+- [Star History](#star-history)
 
 ---
 
@@ -179,9 +180,9 @@
 
 - 🛠️ [Projen](https://github.com/projen/projen) - Project generation and management
 - 🛠️ [CDK Dia](https://github.com/pistazie/cdk-dia) - Diagram generation
-- 🛠️ [CDK Watch](https://docs.aws.amazon.com/cdk/v2/guide/cli.html#cli-deploy-watch) - Hot reload deployments
+- 🛠️ [CDK Watch Mode](https://docs.aws.amazon.com/cdk/v2/guide/work-with-cdk-typescript.html) - Hot reload deployments
 - 🛠️ [CDK Diff](https://github.com/aws/aws-cdk/tree/master/packages/cdk-diff) - Stack diff tool
-- 🛠️ [CDK Import](https://docs.aws.amazon.com/cdk/v2/guide/cli.html#cli-import) - Import existing resources
+- 🛠️ [CDK Resource Import](https://docs.aws.amazon.com/cdk/v2/guide/resource-import.html) - Import existing resources
 
 ### Testing Tools
 
@@ -193,7 +194,7 @@
 
 ### Validation & Linting
 
-- ✅ [cdk-validator](https://github.com/cdklabs/cdk-nag) - Best practice checks
+- ✅ [cdk-nag-linting](https://constructs.dev/packages/cdk-nag) - Best practice checks
 - ✅ [cfn-lint](https://github.com/aws-cloudformation/cfn-lint) - CloudFormation linting
 - ✅ [cdk-validator-cfnguard](https://github.com/cdklabs/cdk-validator-cfnguard) - Policy validation
 - ✅ [Checkov](https://github.com/bridgecrewio/checkov) - Security scanning
@@ -309,7 +310,7 @@ export class RestApi<T extends Record<string, any>> extends Construct {
 - 🌟 [Serverless Stack (SST)](https://github.com/serverless-stack/sst) - Full-stack serverless framework
 - 🌟 [AWS Controllers for Kubernetes](https://github.com/aws-controllers-k8s/community) - Kubernetes controllers
 - 🌟 [Serverless Airline](https://github.com/aws-samples/aws-serverless-airline-booking) - Demo airline app
-- 🌟 [AWS Solutions Library](https://github.com/awslabs/aws-solutions-constructs) - Solution patterns
+- 🌟 [AWS Solutions Implementations](https://aws.amazon.com/solutions/implementations/) - Production-ready solutions
 
 ### Company Case Studies
 
@@ -381,10 +382,10 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ### How to Contribute
 
-- **Add a Resource** - Submit a PR with your addition
-- **Fix an Issue** - Help us maintain link quality
-- **Improve Documentation** - Enhance descriptions or examples
-- **Share Your Project** - Add your real-world CDK project
+- Add a Resource - Submit a PR with your addition
+- Fix an Issue - Help us maintain link quality
+- Improve Documentation - Enhance descriptions or examples
+- Share Your Project - Add your real-world CDK project
 
 ### Criteria for Inclusion
 
