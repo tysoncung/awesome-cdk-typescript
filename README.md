@@ -45,6 +45,12 @@
 - [TypeScript Specific](#typescript-specific)
 - [Real-World Projects](#real-world-projects)
 - [Best Practices](#best-practices)
+- [Community & Support](#community--support)
+- [Migration & Upgrade Guides](#migration--upgrade-guides)
+- [Performance & Optimization](#performance--optimization)
+- [Troubleshooting & Debugging](#troubleshooting--debugging)
+- [Plugins & Extensions](#plugins--extensions)
+- [Advanced Topics](#advanced-topics)
 
 ---
 
@@ -371,6 +377,228 @@ export class MonitoringStack extends Stack { }
 - 💡 Use Spot instances where appropriate
 - 💡 Set up billing alarms
 - 💡 Regular cost reviews with Infracost
+
+---
+
+## Community & Support
+
+### Community Resources
+
+- 💬 [CDK.dev Slack](https://cdk.dev/) - Official CDK community Slack workspace
+- 💬 [AWS CDK GitHub Discussions](https://github.com/aws/aws-cdk/discussions) - Ask questions and share ideas
+- 💬 [r/aws CDK posts](https://www.reddit.com/r/aws/search?q=cdk) - Reddit community discussions
+- 💬 [Stack Overflow CDK Tag](https://stackoverflow.com/questions/tagged/aws-cdk) - Q&A for CDK developers
+- 💬 [CDK on Discord](https://discord.gg/aws-cdk) - Real-time community chat
+
+### Events & Meetups
+
+- 🎉 [CDK Day](https://www.cdkday.com/) - Annual global CDK conference
+- 🎉 [AWS Community Day](https://aws.amazon.com/developer/community/community-day/) - Local AWS events
+- 🎉 [CDK Meetups](https://www.meetup.com/topics/aws-cdk/) - Local CDK user groups
+- 🎉 [AWS re:Invent CDK Sessions](https://reinvent.awsevents.com/) - Annual conference sessions
+
+### Notable Contributors
+
+- 👤 [Elad Ben-Israel](https://github.com/eladb) - CDK creator
+- 👤 [Matthew Bonig](https://github.com/mbonig) - CDK Book author
+- 👤 [Matt Coulter](https://github.com/nideveloper) - CDK Patterns creator
+- 👤 [Adam Keller](https://github.com/adamjkeller) - AWS CDK team
+- 👤 [Daniel Schroeder](https://github.com/udondan) - Community constructs
+
+---
+
+## Migration & Upgrade Guides
+
+### Version Migrations
+
+- 📖 [CDK v1 to v2 Migration Guide](https://docs.aws.amazon.com/cdk/v2/guide/migrating-v2.html) - Official migration path
+- 📖 [Breaking Changes Log](https://github.com/aws/aws-cdk/blob/main/CHANGELOG.v2.md) - Version change tracking
+- 📖 [TypeScript 4.x to 5.x](https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/) - TypeScript upgrades
+- 📖 [Node.js Version Support](https://docs.aws.amazon.com/cdk/v2/guide/work-with-cdk-typescript.html#typescript-prerequisites) - Node version matrix
+
+### CloudFormation to CDK
+
+- 🔄 [CloudFormation Include](https://docs.aws.amazon.com/cdk/api/v2/docs/cloudformation-include-readme.html) - Import existing templates
+- 🔄 [cdk migrate](https://docs.aws.amazon.com/cdk/v2/guide/migrate.html) - Automated migration tool
+- 🔄 [Former2](https://github.com/iann0036/former2) - Generate CDK from existing resources
+- 🔄 [CFN to CDK Converter](https://github.com/cdklabs/decdk) - Template conversion tool
+
+### Terraform to CDK
+
+- 🔄 [CDKTF](https://developer.hashicorp.com/terraform/cdktf) - CDK for Terraform
+- 🔄 [Terraform Import](https://docs.aws.amazon.com/cdk/v2/guide/resource-import.html) - Import Terraform state
+- 🔄 [AWS CDK vs Terraform](https://www.trek10.com/blog/aws-cdk-vs-terraform) - Comparison guide
+
+---
+
+## Performance & Optimization
+
+### Build Performance
+
+- ⚡ [esbuild for Lambda](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_lambda_nodejs-readme.html) - Fast bundling
+- ⚡ [Asset Bundling](https://docs.aws.amazon.com/cdk/v2/guide/assets.html) - Optimize asset handling
+- ⚡ [CDK Context Caching](https://docs.aws.amazon.com/cdk/v2/guide/context.html) - Cache lookups
+- ⚡ [Parallel Stack Deployments](https://github.com/aws/aws-cdk/issues/11246) - Deploy multiple stacks
+- ⚡ [Tree Shaking](https://github.com/aws/aws-cdk/tree/main/packages/%40aws-cdk/aws-lambda-nodejs) - Reduce bundle size
+
+### Runtime Performance
+
+- 🚀 [Lambda Provisioned Concurrency](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_lambda.Function.html#provisionedconcurrentexecutions) - Warm starts
+- 🚀 [Lambda Layers](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_lambda.LayerVersion.html) - Share dependencies
+- 🚀 [RDS Proxy](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_rds.DatabaseProxy.html) - Connection pooling
+- 🚀 [CloudFront CDN](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_cloudfront-readme.html) - Edge caching
+- 🚀 [DynamoDB DAX](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_dax-readme.html) - In-memory cache
+
+### Cost Optimization Patterns
+
+- 💸 [Serverless Aurora](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_rds.ServerlessCluster.html) - Auto-scaling database
+- 💸 [S3 Intelligent Tiering](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_s3.IntelligentTieringConfiguration.html) - Automatic storage optimization
+- 💸 [Lambda ARM64](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_lambda.Architecture.html) - 20% cost reduction
+- 💸 [Spot Instances](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2.SpotInstanceType.html) - Discounted compute
+- 💸 [Graviton Instances](https://aws.amazon.com/ec2/graviton/) - Better price/performance
+
+---
+
+## Troubleshooting & Debugging
+
+### Common Issues
+
+#### Deployment Failures
+
+```typescript
+// Issue: Stack too large (>50MB)
+// Solution: Use asset bundling or split into multiple stacks
+
+// Issue: Resource limit exceeded
+// Solution: Request service quota increase
+
+// Issue: Circular dependencies
+// Solution: Use exportValue() and Fn.importValue()
+const vpcId = vpc.exportValue('VpcId');
+const importedVpc = ec2.Vpc.fromVpcAttributes(this, 'ImportedVpc', {
+  vpcId: Fn.importValue('VpcId')
+});
+```
+
+#### TypeScript Errors
+
+```typescript
+// Issue: Type inference fails
+// Solution: Explicit type annotations
+
+const bucket: s3.IBucket = new s3.Bucket(this, 'MyBucket', {
+  bucketName: 'my-bucket'
+});
+
+// Issue: Module not found
+// Solution: Check node_modules and tsconfig paths
+```
+
+### Debugging Tools
+
+- 🐛 [CDK Doctor](https://docs.aws.amazon.com/cdk/v2/guide/cli.html#cli-doctor) - Diagnose issues
+- 🐛 [CloudFormation Events](https://docs.aws.amazon.com/cdk/v2/guide/cli.html#cli-deploy) - Watch deployment
+- 🐛 [X-Ray Tracing](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_lambda.Tracing.html) - Application debugging
+- 🐛 [CloudWatch Logs Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html) - Log analysis
+- 🐛 [CDK Context](https://docs.aws.amazon.com/cdk/v2/guide/context.html) - Debug context values
+
+### Log Analysis
+
+```typescript
+// Enable detailed CloudFormation logging
+import { CfnOutput } from 'aws-cdk-lib';
+
+new CfnOutput(this, 'StackName', {
+  value: this.stackName,
+  description: 'Current stack name for debugging'
+});
+
+// Enable CDK verbose output
+// cdk deploy --verbose
+// cdk diff --verbose
+```
+
+---
+
+## Plugins & Extensions
+
+### IDE Extensions
+
+- 🔌 [AWS Toolkit for VS Code](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-toolkit-vscode) - CDK support in VS Code
+- 🔌 [AWS Toolkit for JetBrains](https://plugins.jetbrains.com/plugin/11349-aws-toolkit) - IntelliJ/WebStorm integration
+- 🔌 [CDK Snippets](https://marketplace.visualstudio.com/items?itemName=awslabs.aws-cdk-snippets) - Code snippets for VS Code
+- 🔌 [CloudFormation Linter](https://marketplace.visualstudio.com/items?itemName=kddejong.vscode-cfn-lint) - Template validation
+
+### CLI Plugins
+
+- 🔌 [cdk-dia](https://github.com/pistazie/cdk-dia) - Generate architecture diagrams
+- 🔌 [aws-cdk-graph](https://github.com/aws/aws-cdk/tree/main/packages/%40aws-cdk/aws-graph) - Graph visualization
+- 🔌 [cdk8s-cli](https://cdk8s.io/docs/latest/cli/) - Kubernetes manifest generation
+- 🔌 [cdktf-cli](https://developer.hashicorp.com/terraform/cdktf/cli-reference) - Terraform CDK CLI
+
+### Build Tool Integrations
+
+- 🔌 [nx-cdk](https://github.com/tienne/nx-plugins) - Nx monorepo integration
+- 🔌 [turborepo-cdk](https://turbo.build/) - Turborepo integration
+- 🔌 [projen](https://github.com/projen/projen) - Project scaffolding
+- 🔌 [yarn-plugin-cdk](https://github.com/aws/aws-cdk/issues/19237) - Yarn workspaces
+- 🔌 [pnpm-workspace](https://pnpm.io/workspaces) - pnpm monorepos
+
+---
+
+## Advanced Topics
+
+### Multi-Region Deployments
+
+```typescript
+// Deploy to multiple regions
+const usEast1App = new App();
+new MyStack(usEast1App, 'MyStack-us-east-1', {
+  env: { region: 'us-east-1', account: '123456789012' }
+});
+
+const euWest1App = new App();
+new MyStack(euWest1App, 'MyStack-eu-west-1', {
+  env: { region: 'eu-west-1', account: '123456789012' }
+});
+```
+
+### Custom Resource Providers
+
+```typescript
+import { CustomResource, CustomResourceProvider } from 'aws-cdk-lib';
+
+// Create custom resource for unsupported AWS features
+const provider = CustomResourceProvider.getOrCreateProvider(this, 'Custom::MyResource', {
+  codeDirectory: './custom-resources',
+  runtime: Runtime.NODEJS_18_X,
+  policyStatements: [/* IAM permissions */]
+});
+
+new CustomResource(this, 'MyCustomResource', {
+  serviceToken: provider.serviceToken,
+  properties: {
+    key: 'value'
+  }
+});
+```
+
+### CDK Aspects
+
+```typescript
+import { IAspect, IConstruct, Tags } from 'aws-cdk-lib';
+
+// Implement cross-cutting concerns
+class TaggingAspect implements IAspect {
+  visit(node: IConstruct): void {
+    if (node instanceof Bucket) {
+      Tags.of(node).add('Environment', 'Production');
+    }
+  }
+}
+
+Aspects.of(app).add(new TaggingAspect());
+```
 
 ---
 
