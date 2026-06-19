@@ -107,6 +107,7 @@
 - 📦 [cdk-monitoring-constructs](https://github.com/cdklabs/cdk-monitoring-constructs) - Monitoring and alerting constructs
 - 📦 [cdk-watchful](https://github.com/cdklabs/cdk-watchful) - Automatic dashboards and alarms
 - 📦 [cdk-nag](https://github.com/cdklabs/cdk-nag) - Security and compliance checks
+- 📦 [simple-cdk](https://github.com/pujaaan/simple-cdk) - Convention-over-configuration layer on AWS CDK with folder-based scaffolding for Lambda, DynamoDB, AppSync, Cognito, and RDS
 
 ### Serverless
 
